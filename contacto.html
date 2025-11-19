@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto · Combustibles Los Baldíos</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contacto.css">
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="hero-nav" style="background: #0a1a2a; padding: 14px 40px;">
+    <div class="hero-logo">
+      <a href="index.html">
+        <img src="img/logo.png" alt="Logo Combustibles Los Baldíos">
+      </a>
+    </div>
+
+    <nav>
+      <ul class="hero-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html" class="is-active">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-contact">
+      +34 689 595 694 · info@combustibleslosbaldios.com
+    </div>
+  </header>
+
+  <!-- ========== SECCIÓN DE CONTACTO ========== -->
+  <section id="contacto" class="contact-section">
+
+    <div class="contact-bg"></div>
+    <div class="contact-overlay"></div>
+
+    <div class="contact-inner">
+
+      <!-- TEXTO IZQUIERDA -->
+      <div class="contact-copy">
+        <h2>Realizar un pedido</h2>
+        <p>
+          Complete el siguiente formulario y contactaremos con usted lo antes posible.
+        </p>
+
+        <p class="contact-direct">
+          📞 <strong>Teléfono:</strong> <a href="tel:+34689595694">+34 689 595 694</a><br>
+          ✉️ <strong>Email:</strong> <a href="mailto:info@combustibleslosbaldios.com">info@combustibleslosbaldios.com</a>
+        </p>
+      </div>
+
+      <!-- FORMULARIO -->
+      <form class="contact-form"
+            action="https://formsubmit.co/albertoetfenergia@gmail.com"
+            method="POST"
+            novalidate>
+
+        <!-- Ajustes internos de FormSubmit -->
+        <input type="hidden" name="_subject" value="Nuevo pedido desde la web · Combustibles Los Baldíos">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <!-- Cambia esta URL por la real de tu web cuando la tengas publicada -->
+        <input type="hidden" name="_next" value="https://combustibleslosbaldios.com/gracias.html">
+
+        <div class="form-row">
+          <label for="nombre">Nombre y Apellidos:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-row">
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" required>
+        </div>
+
+        <div class="form-row">
+          <label for="localidad">Localidad:</label>
+          <input type="text" id="localidad" name="localidad" required>
+        </div>
+
+        <!-- CP + Provincia -->
+        <div class="form-2col">
+          <div class="form-row half">
+            <label for="cp">Código Postal:</label>
+            <input type="text" id="cp" name="cp">
+          </div>
+
+          <div class="form-row half">
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" required>
+          </div>
+        </div>
+
+        <!-- Tel + Móvil -->
+        <div class="form-2col">
+          <div class="form-row half">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+          </div>
+
+          <div class="form-row half">
+            <label for="movil">T. Móvil:</label>
+            <input type="tel" id="movil" name="movil">
+            <span class="error-msg" id="error-movil"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email">
+          <span class="error-msg" id="error-email"></span>
+        </div>
+
+        <!-- Tipo + Cantidad -->
+        <div class="form-2col">
+          <div class="form-row half">
+            <label for="tipo">Tipo de Combustible:</label>
+            <select id="tipo" name="tipo">
+              <option value="Gasóleo A">Gasóleo A</option>
+              <option value="Gasóleo B Agrícola">Gasóleo B Agrícola</option>
+              <option value="Gasóleo Calefacción">Gasóleo Calefacción</option>
+            </select>
+          </div>
+
+          <div class="form-row half">
+            <label for="cantidad">Cantidad (litros):</label>
+            <input type="number" id="cantidad" name="cantidad" min="0" step="10">
+          </div>
+        </div>
+
+        <!-- RGPD -->
+        <div class="form-consent">
+          <label class="checkbox-line">
+            <input type="checkbox" required>
+            <span>Acepto la política de privacidad y el tratamiento de mis datos.</span>
+          </label>
+
+          <label class="checkbox-line">
+            <input type="checkbox">
+            <span>Doy mi consentimiento para recibir información comercial.</span>
+          </label>
+        </div>
+
+        <!-- Botones -->
+        <div class="form-buttons">
+          <button type="submit" class="btn-contact">Enviar</button>
+          <button type="reset" class="btn-contact btn-secondary-contact">Borrar</button>
+        </div>
+
+      </form>
+
+    </div>
+
+    <!-- CUADRO LEGAL -->
+    <div class="contact-legal">
+      <h3>Información básica sobre protección de datos</h3>
+      <div class="legal-grid">
+        <div><strong>Responsable:</strong> Combustibles Los Baldíos S.L.</div>
+        <div><strong>Dirección:</strong> Calle Retama, 18 · Polígono Industrial · 06510 Alburquerque (Badajoz)</div>
+        <div><strong>Finalidad:</strong> Gestión de solicitudes y suministro de gasóleo.</div>
+        <div><strong>Legitimación:</strong> Consentimiento del interesado.</div>
+        <div><strong>Destinatarios:</strong> No se ceden datos a terceros.</div>
+        <div><strong>Derechos:</strong> Acceder, rectificar o suprimir sus datos.</div>
+        <div><strong>Más información:</strong> Disponible en nuestra política de privacidad.</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Logo Combustibles Los Baldíos">
+      </div>
+
+      <div class="footer-info">
+        <p><strong>Combustibles Los Baldíos S.L.</strong></p>
+        <p>Calle Retama, 18 · Polígono Industrial · 06510 Alburquerque (Badajoz)</p>
+        <p>CIF: B19415025 · CNAE 4730</p>
+      </div>
+
+      <div class="footer-contact">
+        <p>Tel: +34 689 595 694</p>
+        <p>Email: info@combustibleslosbaldios.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Combustibles Los Baldíos S.L. · Todos los derechos reservados
+    </div>
+  </footer>
+
+  <!-- ========== VALIDACIÓN BÁSICA CON JS ========== -->
+  <script>
+    const form = document.querySelector('.contact-form');
+    const emailInput = document.getElementById('email');
+    const movilInput = document.getElementById('movil');
+    const emailError = document.getElementById('error-email');
+    const movilError = document.getElementById('error-movil');
+
+    form.addEventListener('submit', function (e) {
+      let valido = true;
+      limpiarErrores();
+
+      const email = emailInput.value.trim();
+      const movil = movilInput.value.trim();
+
+      // Email simple: algo@algo.loquesea
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email && !emailRegex.test(email)) {
+        mostrarError(emailInput, emailError, 'Introduce un correo electrónico válido.');
+        valido = false;
+      }
+
+      // Teléfono: números, espacios y +, mínimo 9 cifras
+      const phoneRegex = /^[0-9+\s]{9,15}$/;
+      if (movil && !phoneRegex.test(movil)) {
+        mostrarError(movilInput, movilError, 'Introduce un número de móvil válido.');
+        valido = false;
+      }
+
+      if (!valido) {
+        e.preventDefault(); // No se envía el formulario
+      }
+    });
+
+    function mostrarError(input, span, mensaje) {
+      input.classList.add('input-error');
+      span.textContent = mensaje;
+    }
+
+    function limpiarErrores() {
+      emailError.textContent = '';
+      movilError.textContent = '';
+      emailInput.classList.remove('input-error');
+      movilInput.classList.remove('input-error');
+    }
+  </script>
+
+</body>
+</html>
