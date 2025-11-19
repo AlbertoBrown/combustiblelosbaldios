@@ -1,0 +1,109 @@
+/* Fondo general de la página de gracias */
+body {
+  background: url("img/galeria5.jpeg") center center / cover fixed no-repeat;
+}
+
+/* Oscurecemos un poco para que el texto se lea bien */
+.gracias-hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.gracias-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8)
+  );
+  z-index: 0;
+}
+
+/* Tarjeta central con animación de entrada */
+.gracias-card {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  width: 100%;
+  padding: 32px 28px;
+  border-radius: 20px;
+  background: rgba(10, 26, 42, 0.95);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  text-align: center;
+  color: #ffffff;
+
+  /* Animación */
+  animation: graciasFadeUp 0.8s ease-out;
+}
+
+.gracias-logo img {
+  max-width: 140px;
+  margin-bottom: 16px;
+}
+
+.gracias-card h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.gracias-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* Botón volver */
+.gracias-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #ff7b00, #ffb347);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gracias-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(255, 150, 50, 0.8);
+}
+
+/* Animación suave de aparición */
+@keyframes graciasFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gracias-card {
+    padding: 24px 20px;
+  }
+
+  .gracias-card h1 {
+    font-size: 1.7rem;
+  }
+  .error-msg {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #ffb347; /* naranja suave, en línea con la web */
+}
+
+.input-error {
+  border: 1px solid #ff7b00;
+  outline: none;
+}
+}
