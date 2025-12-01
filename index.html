@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Combustibles Los Baldíos</title>
 
   <!-- Hoja de estilos principal -->
@@ -23,31 +24,47 @@
           <img src="img/logo.png" alt="Logo Combustibles Los Baldíos">
         </div>
 
+        <!-- BOTÓN HAMBURGUESA (MÓVIL) -->
+        <button class="hero-burger" aria-label="Abrir menú principal">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <!-- MENÚ -->
-        <nav>
+        <nav class="hero-nav-links">
           <ul class="hero-menu">
-            <li><a href="#" class="is-active">Inicio</a></li>
+            <li><a href="index.html" class="is-active">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="productos.html">Productos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
 
-        <!-- DATOS DE CONTACTO DERECHA -->
+        <!-- DATOS DE CONTACTO -->
         <div class="hero-contact">
-          +34 689 595 694 · info@combustibleslosbaldios.com
+          +34 689 595 694 · pedidos@combustibleslosbaldios.com
         </div>
-          <!-- BOTÓN DE PEDIDO -->
-  <a href="contacto.html" class="btn-header">Realizar pedido</a>
-     </header>
 
-      <!-- TEXTO PRINCIPAL HERO -->
-      <div class="hero-text" id="servicios">
-        <h1 class="hero-title">Suministro de Gasóleo a Domicilio</h1>
-        <p class="hero-subtitle">
-          Gasóleo A, Gasóleo B agrícola y Gasóleo de calefacción para viviendas,
-          explotaciones agrarias, comunidades y empresas.
-        </p>
+        <!-- BOTÓN DE PEDIDO -->
+        <a href="contacto.html" class="btn-header">Realizar pedido</a>
+      </header>
+
+      <!-- BLOQUE PRINCIPAL HERO (TEXTO + LOGO DERECHA) -->
+      <div class="hero-main">
+        <!-- TEXTO PRINCIPAL HERO -->
+        <div class="hero-text" id="servicios">
+          <h1 class="hero-title">Suministro de Gasóleo a Domicilio, Rápido y de Confianza</h1>
+          <p class="hero-subtitle">
+            Ofrecemos Gasóleo A, Gasóleo B agrícola y Gasóleo de calefacción para viviendas,
+            explotaciones agrarias, comunidades y empresas.
+          </p>
+        </div>
+
+        <!-- TARJETA CON LOGO (IMAGEN3.PNG) - SE OCULTA EN MÓVIL -->
+        <div class="hero-logo-card">
+          <img src="img/imagen3.png" alt="Logo Combustibles Los Baldíos">
+        </div>
       </div>
     </div>
   </section>
@@ -76,7 +93,7 @@
         </p>
       </div>
 
-      <!-- TARJETAS HORIZONTALES DERECHA -->
+      <!-- TARJETAS DERECHA -->
       <div class="products-row">
         <a href="productos.html" class="product-card">
           <img src="img/energydiesel.png" alt="Gasóleo A">
@@ -164,7 +181,7 @@
       <!-- CONTACTO RÁPIDO -->
       <div class="footer-contact">
         <p>Tel: +34 689 595 694</p>
-        <p>Email: info@combustibleslosbaldios.com</p>
+        <p>Email: pedidos@combustibleslosbaldios.com</p>
       </div>
     </div>
 
@@ -173,5 +190,37 @@
     </div>
   </footer>
 
+ <!-- ============== SCRIPT MENÚ HAMBURGUESA Y ANIMACIONES ============== -->
+  <script>
+    // Toggle mobile menu
+    const burger = document.querySelector('.hero-burger');
+    const menu = document.querySelector('.hero-menu');
+
+    if (burger && menu) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-open');
+        menu.classList.toggle('is-open');
+      });
+    }
+
+    // Scroll reveal animations using Intersection Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements that need scroll animations
+    document.querySelectorAll('.products-copy, .product-card, .why-images, .why-content, .why-item')
+      .forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
