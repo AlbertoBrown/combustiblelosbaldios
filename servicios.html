@@ -19,7 +19,14 @@
       </a>
     </div>
 
-    <nav>
+    <!-- BOTÓN HAMBURGUESA (MÓVIL) -->
+    <button class="hero-burger" aria-label="Abrir menú principal">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="hero-nav-links">
       <ul class="hero-menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html" class="is-active">Servicios</a></li>
@@ -29,7 +36,7 @@
     </nav>
 
     <div class="hero-contact">
-      +34 689 595 694 · info@combustibleslosbaldios.com
+      +34 689 595 694   pedidos@combustibleslosbaldios.com
     </div>
   </header>
 
@@ -40,16 +47,16 @@
       <!-- TEXTO IZQUIERDA -->
       <div class="services-copy">
         <p class="services-eyebrow">Servicios</p>
-        <h1 class="services-title">Distribución de gasóleo a medida de tus necesidades</h1>
+        <h1 class="services-title">Distribución de carburantes a medida de tus necesidades</h1>
         <p class="services-text">
           Combustibles Los Baldíos S.L. está especializada en el reparto y suministro de gasóleos
           a domicilio para viviendas, explotaciones agrarias, comunidades de propietarios y empresas.
         </p>
 
         <ul class="services-list">
-          <li>Suministro de <strong>Gasóleo A</strong> para vehículos y flotas.</li>
-          <li>Suministro de <strong>Gasóleo B agrícola</strong> para agricultores y ganaderos.</li>
-          <li>Suministro de <strong>Gasóleo de calefacción</strong> para viviendas, negocios y comunidades.</li>
+          <li>Suministro de <strong>Gasóleo A aditivado – Premium</strong> para turismos, vehículos industriales y maquinaria que requieren la máxima protección y eficiencia.</li>
+          <li>Suministro de <strong>Gasóleo B (agrícola e industrial)</strong> para explotaciones agrícolas, maquinaria y equipos industriales.</li>
+          <li>Suministro de <strong>Gas de calefacción (Gasóleo C)</strong> para viviendas, comunidades de vecinos, hoteles, granjas y empresas.</li>
           <li>Servicio de reparto rápido y flexible, adaptado a la campaña y a la climatología.</li>
           <li>Asesoramiento sobre depósitos, consumos y planificación de pedidos.</li>
         </ul>
@@ -79,7 +86,7 @@
 
     <div class="gallery-header">
       <div class="gallery-copy">
-        <h2 class="gallery-title">Instalaciones y flota</h2>
+        <h2 class="gallery-title">Conoce nuestras instalaciones y flota</h2>
         <p class="gallery-text">
           Un vistazo a nuestras instalaciones, camiones cisterna y zona de carga, donde preparamos cada suministro
           con la máxima seguridad y control.
@@ -89,87 +96,100 @@
      
 
     <!-- MINIATURAS -->
-    <div class="gallery-grid">
-      <a href="#img1" class="gallery-item"><img src="img/galeria1.jpeg" alt=""></a>
-      <a href="#img2" class="gallery-item"><img src="img/galeria2.jpeg" alt=""></a>
-      <a href="#img3" class="gallery-item"><img src="img/galeria3.jpeg" alt=""></a>
-      <a href="#img4" class="gallery-item"><img src="img/galeria4.jpeg" alt=""></a>
-      <a href="#img5" class="gallery-item"><img src="img/galeria5.jpeg" alt=""></a>
-      <a href="#img6" class="gallery-item"><img src="img/galeria6.jpeg" alt=""></a>
+    <div class="gallery-scroll-wrapper">
+      <div class="gallery-grid">
+        <a href="#img1" class="gallery-item"><img src="img/galeria1.jpeg" alt=""></a>
+        <a href="#img2" class="gallery-item"><img src="img/galeria2.jpeg" alt=""></a>
+        <a href="#img3" class="gallery-item"><img src="img/galeria3.jpeg" alt=""></a>
+        <a href="#img4" class="gallery-item"><img src="img/galeria4.jpeg" alt=""></a>
+        <a href="#img5" class="gallery-item"><img src="img/galeria5.jpeg" alt=""></a>
+        <a href="#img6" class="gallery-item"><img src="img/galeria6.jpeg" alt=""></a>
+      </div>
     </div>
   </div>
 
-  <!-- LIGHTBOX CON FLECHAS ANTERIOR/SIGUIENTE -->
+  <!-- LIGHTBOX GALERÍA CON NAVEGACIÓN -->
   <div class="lightbox" id="img1">
     <a href="#img6" class="lightbox-prev">‹</a>
     <a href="#img2" class="lightbox-next">›</a>
     <a href="#galeria" class="lightbox-close">×</a>
-    <img src="img/galeria1.jpeg" alt="">
+    <img src="img/galeria1.jpeg" alt="Galería 1">
   </div>
 
   <div class="lightbox" id="img2">
     <a href="#img1" class="lightbox-prev">‹</a>
     <a href="#img3" class="lightbox-next">›</a>
     <a href="#galeria" class="lightbox-close">×</a>
-    <img src="img/galeria2.jpeg" alt="">
+    <img src="img/galeria2.jpeg" alt="Galería 2">
   </div>
 
   <div class="lightbox" id="img3">
     <a href="#img2" class="lightbox-prev">‹</a>
     <a href="#img4" class="lightbox-next">›</a>
     <a href="#galeria" class="lightbox-close">×</a>
-    <img src="img/galeria3.jpeg" alt="">
+    <img src="img/galeria3.jpeg" alt="Galería 3">
   </div>
 
   <div class="lightbox" id="img4">
     <a href="#img3" class="lightbox-prev">‹</a>
     <a href="#img5" class="lightbox-next">›</a>
     <a href="#galeria" class="lightbox-close">×</a>
-    <img src="img/galeria4.jpeg" alt="">
+    <img src="img/galeria4.jpeg" alt="Galería 4">
   </div>
 
   <div class="lightbox" id="img5">
     <a href="#img4" class="lightbox-prev">‹</a>
     <a href="#img6" class="lightbox-next">›</a>
     <a href="#galeria" class="lightbox-close">×</a>
-    <img src="img/galeria5.jpeg" alt="">
+    <img src="img/galeria5.jpeg" alt="Galería 5">
   </div>
 
   <div class="lightbox" id="img6">
     <a href="#img5" class="lightbox-prev">‹</a>
-    <a href="#img1" class="lightbox-next">›</a> <!-- vuelve a la primera -->
+    <a href="#img1" class="lightbox-next">›</a>
     <a href="#galeria" class="lightbox-close">×</a>
-    <img src="img/galeria6.jpeg" alt="">
+    <img src="img/galeria6.jpeg" alt="Galería 6">
   </div>
 </section>
+
+<!-- ============== SCRIPTS ============== -->
 <script>
-document.addEventListener("keydown", function(e) {
+  // Navegación del lightbox con teclado
+  document.addEventListener("keydown", function(e) {
     const hash = window.location.hash;
 
-    // si no estamos dentro de un lightbox, no hacer nada
     if (!hash.startsWith("#img")) return;
 
     const current = parseInt(hash.replace("#img", ""));
     let next = current;
 
-    // Flecha derecha → ir a la siguiente
     if (e.key === "ArrowRight") {
-        next = current === 6 ? 1 : current + 1;
-        window.location.hash = "#img" + next;
+      next = current === 6 ? 1 : current + 1;
+      window.location.hash = "#img" + next;
     }
 
-    // Flecha izquierda ← ir a la anterior
     if (e.key === "ArrowLeft") {
-        next = current === 1 ? 6 : current - 1;
-        window.location.hash = "#img" + next;
+      next = current === 1 ? 6 : current - 1;
+      window.location.hash = "#img" + next;
     }
 
-    // Esc para cerrar
     if (e.key === "Escape") {
-        window.location.hash = "#galeria";
+      window.location.hash = "#galeria";
     }
-});
+  });
+
+  // Menú hamburguesa
+  const burger = document.querySelector('.hero-burger');
+  const menu = document.querySelector('.hero-menu');
+
+  if (burger && menu) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('is-open');
+      menu.classList.toggle('is-open');
+    });
+  }
 </script>
 
 </body>
 </html>
+
