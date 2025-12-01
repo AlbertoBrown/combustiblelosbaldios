@@ -50,6 +50,17 @@
   margin-bottom: 6px;
 }
 
+/* CTA sin brillo en la cabecera de Servicios */
+.services-cta {
+  background: var(--color-primary) !important; /* color plano */
+  box-shadow: none !important;               /* sin resplandor */
+}
+
+.services-cta:hover {
+  background: var(--color-primary-dark) !important; /* cambio sutil */
+  box-shadow: none !important;
+}
+
 /* Columna derecha con dos imágenes */
 .services-images-col {
   flex: 0 0 38%;
@@ -311,6 +322,10 @@
     padding: 10px 20px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    overflow-x: auto;           /* scroll lateral dentro del contenedor */
+    overflow-y: hidden;         /* evita barras verticales accidentales */
+    width: 100%;
+    max-width: 100%;            /* no desborda el viewport */
   }
 
   .gallery-item {
@@ -319,6 +334,8 @@
     scroll-snap-align: start;
   }
 }
+
+
 
 
 
