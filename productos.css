@@ -1,14 +1,14 @@
 /* Fondo general de la página de productos */
 body {
-  background: url("img/galeria3.jpeg") center center / cover fixed no-repeat;
+  background: url("img/galeria3.webp") center center / cover fixed no-repeat;
 }
 
 /* ========== SECCIÓN PRODUCTOS ========== */
 
 .productos-hero {
   position: relative;
-  min-height: calc(100vh - 80px);
-  padding: 60px 20px 80px;
+  min-height: 70vh;
+  padding: 40px 20px 50px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -38,7 +38,7 @@ body {
 
 .productos-titulo {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .productos-titulo h1 {
@@ -164,7 +164,7 @@ body {
 
 @media (max-width: 680px) {
   .productos-hero {
-    padding: 40px 16px 60px;
+    padding: 30px 16px 40px;
   }
 
   .productos-grid {
@@ -179,4 +179,6 @@ body {
     font-size: 2rem;
   }
 }
+
+
 
