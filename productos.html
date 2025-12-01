@@ -14,14 +14,21 @@
 <body>
 
   <!-- ========== HEADER ========== -->
-  <header class="hero-nav"style="background: #0a1a2a; padding: 14px 40px;">
+  <header class="hero-nav" style="background: #0a1a2a; padding: 14px 40px;">
     <div class="hero-logo">
       <a href="index.html">
         <img src="img/logo.png" alt="Logo Combustibles Los Baldíos">
       </a>
     </div>
 
-    <nav>
+    <!-- BOTÓN HAMBURGUESA (MÓVIL) -->
+    <button class="hero-burger" aria-label="Abrir menú principal">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="hero-nav-links">
       <ul class="hero-menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
@@ -31,7 +38,7 @@
     </nav>
 
     <div class="hero-contact">
-      <a href="tel:+34689595694">+34 689 595 694</a>
+      +34 689 595 694   pedidos@combustibleslosbaldios.com
     </div>
   </header>
 
@@ -43,7 +50,7 @@
       <header class="productos-titulo">
         <h1>Nuestros carburantes</h1>
         <p>
-          En Combustibles Los Baldíos trabajamos con carburantes Repsol de última generación,
+          En Combustibles Los Baldíos trabajamos con carburantes de última generación,
           pensados para cuidar tu maquinaria, tu hogar y tu vehículo.
         </p>
       </header>
@@ -56,18 +63,15 @@
             <img src="img/agrodiesel10.png" alt="Repsol AgroDiesel e+10">
           </div>
 
-          <h2>AgroDiesel e+10</h2>
+          <h2>Gasóleo B (agrícola e industrial)</h2>
           <p class="producto-tagline">
-            El gasóleo B más avanzado para tu maquinaria agrícola.
+            Para explotaciones agrícolas, maquinaria y equipos industriales.
           </p>
           <p>
-            Gasóleo agrícola aditivado que mantiene limpio el sistema de inyección, reduce
-            la obstrucción de filtros y ayuda a que tu tractor y maquinaria rindan como el primer día.
-            Alarga la vida útil del motor y disminuye averías.
+            Combustible de alta calidad que protege el motor, reduce averías y maximiza la eficiencia en maquinaria agrícola y equipos industriales.
           </p>
           <p class="producto-detalle">
-            <strong>Especialmente recomendado</strong> para maquinaria agrícola de última generación.
-            Es el único carburante recomendado por John Deere, New Holland y Kubota.
+            Ideal para tractores, cosechadoras, maquinaria de obra pública y sistemas de calefacción industrial.
           </p>
 
           <a href="contacto.html" class="btn-pedir">Pedir</a>
@@ -79,17 +83,15 @@
             <img src="img/energydiesel.png" alt="Repsol Energy e+">
           </div>
 
-          <h2>Energy e+</h2>
+          <h2>Gas de calefacción (Gasóleo C)</h2>
           <p class="producto-tagline">
-            Confort en tu hogar con un consumo más eficiente.
+            Máxima eficiencia y ahorro energético.
           </p>
           <p>
-            Gasóleo de calefacción desarrollado para calderas de condensación y quemadores de llama azul,
-            con rendimientos comparables al gas natural.
+           Especialmente formulado para ofrecer el máximo rendimiento y eficiencia en sistemas de calefacción domésticos e industriales.
           </p>
           <p class="producto-detalle">
-            Gracias a su bajo contenido en azufre y a su formulación exclusiva, supera las exigencias
-            de los principales fabricantes de calderas y cumple los estándares europeos más estrictos.
+            Garantiza un funcionamiento limpio, seguro y económico en calderas, quemadores y sistemas de calefacción centralizados.
           </p>
 
           <a href="contacto.html" class="btn-pedir">Pedir</a>
@@ -101,17 +103,15 @@
             <img src="img/diesel.png" alt="Repsol Diesel e+ y e+10">
           </div>
 
-          <h2>Diesel e+ y Diesel e+10</h2>
+          <h2>Gasóleo A aditivado – Premium</h2>
           <p class="producto-tagline">
-            Máxima protección para tu motor y toda su potencia.
+            Mejor combustión y protección extra del motor.
           </p>
           <p>
-            Carburantes diésel de alta gama que incorporan aditivos antioxidantes patentados
-            para proteger el motor, mejorar la combustión y garantizar una inyección más precisa.
+            Diésel de última generación con aditivos exclusivos que mejoran el rendimiento, la limpieza y la vida útil del motor.
           </p>
           <p class="producto-detalle">
-            Pensados para quienes buscan calidad, fiabilidad y un diésel respetuoso con el medio ambiente
-            para su vehículo del día a día.
+            Ideal para turismos, vehículos industriales y maquinaria que requieren la máxima protección y eficiencia.
           </p>
 
           <a href="contacto.html" class="btn-pedir">Pedir</a>
@@ -139,7 +139,7 @@
       <!-- CONTACTO RÁPIDO -->
       <div class="footer-contact">
         <p>Tel: <a href="tel:+34689595694">+34 689 595 694</a></p>
-        <p>Email: <a href="mailto:info@combustibleslosbaldios.com">info@combustibleslosbaldios.com</a></p>
+        <p>Email: <a href="mailto:pedidos@combustibleslosbaldios.com">pedidos@combustibleslosbaldios.com</a></p>
       </div>
     </div>
 
@@ -147,7 +147,31 @@
       <p>© 2025 Combustibles Los Baldíos S.L. · Todos los derechos reservados</p>
     </div>
   </footer>
+  <!-- ============== SCRIPT MENÚ HAMBURGUESA ============== -->
+  <script>
+    // Toggle menú hamburguesa (móvil)
+    (function () {
+      const burger = document.querySelector('.hero-burger');
+      const menu = document.querySelector('.hero-menu');
+
+      if (!burger || !menu) return;
+
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-open');
+        menu.classList.toggle('is-open');
+      });
+
+      // Cerrar menú con ESC (accesibilidad)
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+          menu.classList.remove('is-open');
+          burger.classList.remove('is-open');
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
+
 
