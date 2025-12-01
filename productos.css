@@ -3,8 +3,6 @@ body {
   background: url("img/galeria3.jpeg") center center / cover fixed no-repeat;
 }
 
-/* Ajuste del header */
-
 /* ========== SECCIÓN PRODUCTOS ========== */
 
 .productos-hero {
@@ -62,6 +60,28 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+  align-items: stretch;          /* 🔹 todas las columnas con la misma altura */
+}
+
+/* ============ ANIMACIONES LOCALES ============ */
+/* Usa keyframes globales definidos en style.css (fadeInScale, slideInLeft) */
+.productos-grid .producto-card {
+  opacity: 0;
+  animation: fadeInScale 0.52s ease-out both;
+}
+.productos-grid .producto-card:nth-child(1) { animation-delay: 0.06s; }
+.productos-grid .producto-card:nth-child(2) { animation-delay: 0.12s; }
+.productos-grid .producto-card:nth-child(3) { animation-delay: 0.18s; }
+
+/* Hover / foco: efecto sutil y coherente con el resto del sitio */
+.producto-card {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+}
+.producto-card:hover,
+.producto-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+  filter: brightness(1.03);
 }
 
 /* Tarjetas */
@@ -75,6 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  height: 100%;                  /* 🔹 la tarjeta ocupa toda la altura del grid */
 }
 
 .producto-logo {
@@ -113,10 +134,10 @@ body {
   opacity: 0.95;
 }
 
-/* Botón PEDIR — SIEMPRE VISIBLE */
+/* Botón PEDIR — SIEMPRE AL FONDO DE LA CARD */
 .btn-pedir {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: auto;              /* 🔹 empuja el botón al final de la tarjeta */
   padding: 10px 22px;
   border-radius: 12px;
   background: linear-gradient(90deg, #ff7b00, #ffb347);
@@ -158,3 +179,4 @@ body {
     font-size: 2rem;
   }
 }
+
