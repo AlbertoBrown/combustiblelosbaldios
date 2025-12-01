@@ -98,7 +98,7 @@
   color: #f9fafb;
   padding: 70px 40px 80px;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
-                    url("img/fondo2.jpg");
+                    url("img/fondo2.webp");
   background-size: cover;
   background-position: center;
 }
@@ -334,6 +334,8 @@
     scroll-snap-align: start;
   }
 }
+
+
 
 
 
